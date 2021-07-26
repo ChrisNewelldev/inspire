@@ -12,24 +12,48 @@
     <title>Inspire</title>
 </head>
 
-<body>
+<body onload="startTime()">
     <header>
-        <nav class="navbar">
-            <a class="navbar">
-                <div id= ""weather" class="ml-2"></div>
-            </a>
-        </nav>
     </header>
-    <main class="container">
-        <div class="row"></div>
-        <div id="app"></div>
-    </main>
-    <footer class="bg-dark text-light">
-        <div class="text-center">
-            <p><small>Made with love by Chris</small></p>
+    <main class="container-fluid" id="image">
+        <div class="row">
+            <div class="col" id="weather">Temp:</div>
         </div>
-    </footer>
+        <div class="row">
+            <div class="col" id="todo"></div>
+        </div>
+        <div class="row">
+            <div class="col center-screen" id="clock">
+                <script>
+                    function startTime() {
+                        const today = new Date();
+                        let h = today.getHours();
+                        let m = today.getMinutes();
+                        let s = today.getSeconds();
+                        m = checkTime(m);
+                        s = checkTime(s);
+                        document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+                        setTimeout(startTime, 1000);
+                    }
 
+                    function checkTime(i) {
+                        if (i < 10) { i = "0" + i };
+                        return i;
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="row fixed-bottom">
+            <div class="col-4" id="imagedata">Image Data:</div>
+            <div class="col-4" id="quote"></div>
+            <div class="col-4" id="todo">Todo:</div>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 

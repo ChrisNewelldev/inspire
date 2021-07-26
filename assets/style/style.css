@@ -1,1 +1,65 @@
 /* BASIC STYLES HERE */
+
+#clock {
+  color: white;
+  text-align: center;
+  font-size: 8em;
+  
+}
+
+#weather {
+  color: white;
+  text-align: right;
+  font-size: 1em;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+#imagedata {
+color: white;
+display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1em;
+  justify-content: bottom;
+  align-items: bottom;
+  text-align: bottom;
+}
+
+#todo {
+color: white;
+display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 1em;
+  justify-content: bottom;
+  align-items: bottom;
+  text-align: bottom;
+}
+
+#quote {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1em;
+  justify-content: bottom;
+  align-items: bottom;
+  text-align: bottom;
+}
+
+h5 {
+  padding: 20px;
+  display: none;
+}
+  
+span:hover + h5 {
+  display: block;
+}
