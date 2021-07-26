@@ -1,18 +1,21 @@
 import { ProxyState } from "../AppState.js"
-import { TodosService } from "../TodosSerTodosService.js"
+import { todosService } from "../Services/TodosService.js"
 
 function _draw() {
+
   let template = ''
+
   ProxyState.todos.forEach(todo => {
-    template = todo.template
+    template += todo.Template
   })
-  document.getElementById('todos').innerHTML = template
+  console.log(template)
+  document.getElementById('todo').innerHTML = template
 }
 
 export default class TodosController {
   constructor() {
     ProxyState.on('todos', _draw)
-    ProxyState.on('todos', () => { console.log('new todo') })
+    ProxyState.on('todos', () => { console.log('new todos') })
     _draw()
   }
 

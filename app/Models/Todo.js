@@ -17,11 +17,9 @@ export default class Todo {
                     <div class="form-check">
                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
                             value="option1" aria-label="...">
-                    </div>${data.description}list<button class="btn"
-                        onclick="app.todosController.deleteTodo('${data.id}')">
+                    </div>${this.description}<button class="btn"
+                        onclick="app.todosController.deleteTodo('${this.id}')">
                         delete </button>
-                    <input type="text" placeholder="Write a to do.." />
-                    <button type="submit" class="btn">Add Todo</button>
                 </form>
     `
   }
