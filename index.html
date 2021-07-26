@@ -17,10 +17,9 @@
     </header>
     <main class="container-fluid" id="image">
         <div class="row">
-            <div class="col" id="weather">Temp:</div>
-        </div>
-        <div class="row">
-            <div class="col" id="todo"></div>
+            <div class="col" id="weather">
+                <p>Temp:</p>
+            </div>
         </div>
         <div class="row">
             <div class="col center-screen" id="clock">
@@ -46,7 +45,16 @@
         <div class="row fixed-bottom">
             <div class="col-4" id="imagedata">Image Data:</div>
             <div class="col-4" id="quote"></div>
-            <div class="col-4" id="todo">Todo:</div>
+            <div class="col-4" id="todo">
+                <form class="todo">
+                    <li>${this.description}list<button class="btn btn-danger"
+                            onclick="app.todosController.deleteTodo('${this.id}')">
+                            delete </button></li>
+
+                    <input type="text" placeholder="Write a to do.." />
+                    <button type="submit" class="btn btn-outline-success">Add Todo</button>
+                </form>
+            </div>
         </div>
     </main>
 

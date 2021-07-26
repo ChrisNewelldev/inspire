@@ -1,25 +1,20 @@
 export default class Todo {
   constructor(data) {
-    this._id = data._id,
+    this.id = data.id,
       this.completed = data.completed,
-      this.description = data.description
-    this.user = data.user
-    id: { type: String, required: true, unique: true }
-    completed: { type: Boolean, required: true, default: false
-},
-user: { type: String, required: true },
-}
+      this.description = data.description,
+      this.user = data.user
+  }
 
-get TodoTemplate() {
-
-  `
-
-
+  get Template() {
+    return `
+    <li>${this.description}</li>
+    <button class="btn btn-danger" onclick="app.todosController.deleteTodo('${this.id}')"> delete </button>
     `
 
 
-}
+  }
+
+
 
 }
-
-

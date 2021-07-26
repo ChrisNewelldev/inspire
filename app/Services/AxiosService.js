@@ -19,7 +19,7 @@ export const todosApi = axios.create({
 })
 
 export const weathersApi = axios.create({
-  baseURL: "https://bcw-sandbox.herokuapp.com/api/weather",
+  baseURL: "https://bcw-sandbox.herokuapp.com/api/Weather",
   timeout: 13000
 })
 

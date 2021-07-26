@@ -1,13 +1,13 @@
-//import { ProxyState } from "../AppState.js";
-//import Weather from "../Models/Weather.js";
-//import { weatherApi } from "./AxiosService.js";
+import { ProxyState } from "../AppState.js";
+import Weather from "../Models/Weather.js";
+import { weathersApi } from "./AxiosService.js";
 
-//class WeathersService {
-//  async getWeather(id) {
-//    let res = await weatherApi.get(id)
-//    console.log(res.data)
-//   ProxyState.Weather = new Weather(res.data)
-//  }
-//}
+class WeathersService {
+  async getWeather() {
+    let res = await weathersApi.get()
+    ProxyState.weathers = new Weather(res.data)
+    console.log(res.data)
+  }
+}
 
-//export const weathersService = new WeathersService
+export const weathersService = new WeathersService()
