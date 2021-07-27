@@ -13,7 +13,7 @@ class AppState extends EventEmitter {
   images = []
   /** @type {Quote} */
   quotes = []
-  /** @type {Todo[]} */
+  /** @type {Todo} */
   todos = []
   /** @type {Weather} */
   weathers = []
