@@ -29,7 +29,7 @@ class TodosService {
   async destroyList(id) {
     let getGone = ProxyState.todos.filter(t => t.id != id)
     await sandbox.delete(`Chris/todos/${id}`, getGone)
-    //this.getAllTodos()
+    this.getAllTodos()
 
   }
 }
